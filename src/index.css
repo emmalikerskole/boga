@@ -20,3 +20,14 @@ body {
 #root {
   min-height: 100vh;
 }
+
+.home {
+  display: flex;
+  flex-direction: column;   /* navbar on top, main below */
+  min-height: 100vh;
+}
+
+.home-title {
+  font-size: clamp(3rem, 10vw, 8rem);  /* scales with screen width instead of overflowing */
+  overflow-wrap: break-word;
+}
