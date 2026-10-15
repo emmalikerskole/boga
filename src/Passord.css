@@ -14,9 +14,9 @@
   font-family: var(--font-mono);
   background: radial-gradient(
     ellipse at center,
-    #c3c8cd 0%,
+    #f6f5f3 0%,
     var(--paper) 60%,
-    #a4abb2 100%
+    var(--paper) 100%
   );
 }
 
