@@ -1,15 +1,15 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import PasswordGate from "./Passord";
 import Home from "./Home";
 
 export default function App() {
   return (
     <PasswordGate>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-      </Routes>
-      </BrowserRouter>
+        </Routes>
+      </HashRouter>
     </PasswordGate>
   );
 }
