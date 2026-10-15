@@ -57,7 +57,7 @@ export default function PasswordGate({ children }) {
           className="gate-input"
         />
         <button type="submit" className="gate-button">
-          Send
+          TEST
         </button>
         <p className="gate-error" role="alert">
           {error}
