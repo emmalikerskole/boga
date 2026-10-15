@@ -9,7 +9,7 @@ export default function Home() {
     <div className="home">
       {/* <Navbar /> */}
       <main className="home-main">
-        <CornerText position="top-left" lines={["Vi skal gifte oss i", "Oktober!", "test"]} />
+        <CornerText position="top-left" lines={["Vi skal gifte oss i", "Oktober!"]} />
         <CornerText position="top-right" lines={["Gamlebyen,", "Oslo"]} />
 
         <CouplePortrait
