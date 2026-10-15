@@ -1,0 +1,35 @@
+.corner-text {
+  position: absolute;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-mono);
+  font-size: clamp(13px, 1.6vw, 18px);
+  line-height: 1.1;
+  color: var(--ink);
+  letter-spacing: 0.02em;
+}
+
+.corner-text--top-left {
+  top: clamp(24px, 6vw, 56px);
+  left: clamp(24px, 8vw, 96px);
+  text-align: left;
+}
+
+.corner-text--top-right {
+  top: clamp(24px, 6vw, 56px);
+  right: clamp(24px, 8vw, 96px);
+  text-align: right;
+}
+
+.corner-text--bottom-left {
+  bottom: clamp(24px, 6vw, 56px);
+  left: clamp(24px, 8vw, 96px);
+  text-align: left;
+}
+
+.corner-text--bottom-right {
+  bottom: clamp(24px, 6vw, 56px);
+  right: clamp(24px, 8vw, 96px);
+  text-align: right;
+}
