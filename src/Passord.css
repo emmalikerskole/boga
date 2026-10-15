@@ -91,3 +91,9 @@
   font-size: 13px;
   font-style: italic;
 }
+
+/* Når passordsiden vises: bakgrunnen bak siden matcher kanten av gradienten */
+html:has(.gate),
+html:has(.gate) body {
+  background: #c1c5c9;
+}
