@@ -4,8 +4,11 @@
    ========================================================== */
 
 .gate {
-  min-height: 100vh;
-  min-height: 100dvh;
+  position: fixed;   /* låst til skjermen, ingenting å dra i */
+  inset: 0;          /* fyller hele skjermen */
+  overflow-y: auto;  /* kan fortsatt scrolles hvis tastaturet tar plass */
+  overscroll-behavior: none;
+
   display: flex;
   align-items: center;
   justify-content: center;
@@ -90,10 +93,4 @@
   margin: 16px 0 0;
   font-size: 13px;
   font-style: italic;
-}
-
-/* Når passordsiden vises: bakgrunnen bak siden matcher kanten av gradienten */
-html:has(.gate),
-html:has(.gate) body {
-  background: #c1c5c9;
 }
