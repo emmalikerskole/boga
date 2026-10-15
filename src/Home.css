@@ -1,43 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Pinyon+Script&display=swap");
 
-.home-title {
-  font-family: "Pacifico", cursive;
-  font-size: clamp(3.5rem, 14vw, 9rem);
-  font-weight: 400;
-  color: #280404;
+:root {
+  /* --paper: #efedea; */
+  /* --ink: #8c6b70; /* støvete rosa/mauve tekst */
+  --paper: #cbced1; /* lys grå-blå bakgrunn */
+  --ink: #282a34;   /* mørk marineblå tekst */
+  --font-mono: "Courier Prime", "Courier New", monospace;
+  --font-script: "Pinyon Script", cursive;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
-  line-height: 1.2;
-  text-align: center;
+  background: var(--paper);
 }
 
-/*
 .home {
-  height: 100%;
+  min-height: 100vh;
+  /* svak papirfølelse: lysere midt, litt mørkere kanter */
+  background:
+    radial-gradient(ellipse at center, #f6f5f3 0%, var(--paper) 60%, #e2dfdb 100%);
+}
+
+.home-main {
+  position: relative;
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px;
-  box-sizing: border-box;
-  background-image:
-    linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)),
-    url("./assets/blomst.jpg");
-  min-height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;   
-}
-*/
-
-.home {
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 16px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-  background-color: #fdf6d8;   /* pale yellow */
+  padding: clamp(24px, 6vw, 72px);
 }
