@@ -1,21 +1,23 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Pinyon+Script&display=swap");
+/* ==========================================================
+   passord.css – passordsiden
+   Farger og fonter kommer fra index.css
+   ========================================================== */
 
-/* Fallback-verdiene gjør at siden ser riktig ut selv om Home.css ikke er lastet ennå */
 .gate {
-  --g-paper: var(--paper, #cbced1);
-  --g-ink: var(--ink, #282a34);
-  --g-mono: var(--font-mono, "Courier Prime", "Courier New", monospace);
-  --g-script: var(--font-script, "Pinyon Script", cursive);
-
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 24px;
-  color: var(--g-ink);
-  font-family: var(--g-mono);
-  background:
-    radial-gradient(ellipse at center, #c3c8cd 0%, var(--g-paper) 60%, #a4abb2 100%);
+  color: var(--ink);
+  font-family: var(--font-mono);
+  background: radial-gradient(
+    ellipse at center,
+    #c3c8cd 0%,
+    var(--paper) 60%,
+    #a4abb2 100%
+  );
 }
 
 .gate-form {
@@ -28,7 +30,7 @@
 
 .gate-title {
   margin: 0 0 0.4em;
-  font-family: var(--g-script);
+  font-family: var(--font-script);
   font-weight: 400;
   font-size: clamp(40px, 8vw, 56px);
   line-height: 1;
@@ -46,11 +48,11 @@
   width: 100%;
   padding: 8px 4px;
   border: none;
-  border-bottom: 1px solid var(--g-ink);
+  border-bottom: 1px solid var(--ink);
   background: transparent;
-  color: var(--g-ink);
-  font-family: var(--g-mono);
-  font-size: 18px;
+  color: var(--ink);
+  font-family: var(--font-mono);
+  font-size: 18px; /* minst 16px, ellers zoomer iPhone inn ved trykk */
   text-align: center;
   letter-spacing: 0.2em;
   outline: none;
@@ -64,10 +66,10 @@
 .gate-button {
   margin-top: 28px;
   padding: 10px 32px;
-  border: 1px solid var(--g-ink);
+  border: 1px solid var(--ink);
   background: transparent;
-  color: var(--g-ink);
-  font-family: var(--g-mono);
+  color: var(--ink);
+  font-family: var(--font-mono);
   font-size: 14px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
@@ -77,8 +79,8 @@
 
 .gate-button:hover,
 .gate-button:focus-visible {
-  background: var(--g-ink);
-  color: var(--g-paper);
+  background: var(--ink);
+  color: var(--paper);
   outline: none;
 }
 

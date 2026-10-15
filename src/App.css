@@ -1,20 +1,16 @@
-body {
-  margin: 0;
-  font-family: Georgia, 'Times New Roman', serif;
-  background-color: #f3f8f6;
-  color: #4a6b7c;
-}
+/* ==========================================================
+   App.css – meny, enkle sider og slideshow
+   ========================================================== */
 
-/* Menu bar */
+/* ---------- Meny ---------- */
 .navbar {
-  height: 60px;
+  height: var(--nav-height);
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 24px;
-  background-color: #ffffff;
-  border-bottom: 1px solid #9cbfa7;
-  box-sizing: border-box;
+  background-color: var(--white);
+  border-bottom: 1px solid var(--accent);
 }
 
 .navbar button {
@@ -25,20 +21,27 @@ body {
   cursor: pointer;
 }
 
-.brand { font-size: 1.4rem; }
-
-.tab {
-  font-size: 1rem;
-  padding: 8px 12px;
-  border-bottom: 2px solid transparent !important;
+.brand {
+  font-size: 1.4rem;
 }
 
-.tab.active,
-.tab:hover { border-bottom-color: #9cbfa7 !important; }
+/* ".navbar .tab" er sterkere enn ".navbar button", så !important trengs ikke */
+.navbar .tab {
+  font-size: 1rem;
+  padding: 8px 12px;
+  border-bottom: 2px solid transparent;
+}
 
-/* Simple full pages (welcome + placeholders) */
-.page {
-  height: calc(100vh - 60px);
+.navbar .tab.active,
+.navbar .tab:hover {
+  border-bottom-color: var(--accent);
+}
+
+/* ---------- Felles for hele skjermen under menyen ---------- */
+.page,
+.slide {
+  height: calc(100vh - var(--nav-height));
+  height: calc(100dvh - var(--nav-height));
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,29 +49,35 @@ body {
   text-align: center;
 }
 
-.page h1 { font-weight: normal; font-size: 3rem; margin: 0; }
+.page h1,
+.slide h1 {
+  font-weight: normal;
+  font-size: 3rem;
+  margin: 0;
+}
 
-/* Slideshow (fills the space under the menu) */
+/* ---------- Slideshow ---------- */
 .slides {
-  height: calc(100vh - 60px);
-  overflow-y: scroll;
+  height: calc(100vh - var(--nav-height));
+  height: calc(100dvh - var(--nav-height));
+  overflow-y: auto;
   scroll-snap-type: y mandatory;
+  overscroll-behavior: contain; /* scrollen lekker ikke ut til siden */
 }
 
 .slide {
-  height: calc(100vh - 60px);
   scroll-snap-align: start;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   padding: 0 20px;
-  box-sizing: border-box;
 }
 
-.slide h1 { font-weight: normal; font-size: 3rem; margin: 0 0 16px; }
-.slide p { font-size: 1.3rem; margin: 8px 0; }
+.slide h1 {
+  margin-bottom: 16px;
+}
+
+.slide p {
+  font-size: 1.3rem;
+  margin: 8px 0;
+}
 
 .divider {
   width: 200px;

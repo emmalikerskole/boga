@@ -1,33 +1,24 @@
-@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Pinyon+Script&display=swap");
-
-:root {
-  /* --paper: #efedea; */
-  /* --ink: #8c6b70; /* støvete rosa/mauve tekst */
-  --paper: #cbced1; /* lys grå-blå bakgrunn */
-  --ink: #282a34;   /* mørk marineblå tekst */
-  --font-mono: "Courier Prime", "Courier New", monospace;
-  --font-script: "Pinyon Script", cursive;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  background: var(--paper);
-}
+/* ==========================================================
+   home.css – forsiden
+   Farger og fonter kommer fra index.css
+   ========================================================== */
 
 .home {
   min-height: 100vh;
-  /* svak papirfølelse: lysere midt, litt mørkere kanter */
-  background:
-    radial-gradient(ellipse at center, #f6f5f3 0%, var(--paper) 60%, #e2dfdb 100%);
+  min-height: 100dvh;
+  /* svak papirfølelse: lysere midt, kantene går over i bakgrunnsfargen */
+  background: radial-gradient(
+    ellipse at center,
+    #f6f5f3 0%,
+    var(--paper) 60%,
+    var(--paper) 100%
+  );
 }
 
 .home-main {
   position: relative;
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   align-items: center;
   justify-content: center;

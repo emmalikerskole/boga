@@ -1,3 +1,26 @@
+/* ==========================================================
+   index.css – globalt: fonter, farger, reset og bakgrunn.
+   Importeres i main.jsx og gjelder for hele siden.
+   ========================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Pinyon+Script&display=swap");
+
+:root {
+  /* Farger */
+  --paper: #cbced1;   /* lys grå-blå bakgrunn */
+  --ink: #282a34;     /* mørk marineblå tekst */
+  --accent: #9cbfa7;  /* grønn strek i menyen */
+  --white: #ffffff;
+
+  /* Fonter */
+  --font-body: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "Courier Prime", "Courier New", monospace;
+  --font-script: "Pinyon Script", cursive;
+
+  /* Størrelser */
+  --nav-height: 60px;
+}
+
 *,
 *::before,
 *::after {
@@ -8,17 +31,17 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: var(--paper);
+  overscroll-behavior: none; /* ingen sprett ved dra på mobil */
 }
 
 body {
-  background: #cbced1;
-  margin: 0;
-  color: #222;
-  font-family: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;
+  color: var(--ink);
+  font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
-  overscroll-behavior: none;
 }
 
 #root {
   min-height: 100vh;
+  min-height: 100dvh;
 }
