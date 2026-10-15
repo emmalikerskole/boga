@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Passord.css";
 
 // SHA-256 hash of your password (not the password itself).
 // Generate one with:
@@ -39,10 +40,13 @@ export default function PasswordGate({ children }) {
   if (unlocked) return children;
 
   return (
-    <div style={styles.wrapper}>
-      <form onSubmit={handleSubmit} style={styles.form}>
-        <h2 style={{ margin: 0 }}>Enter password</h2>
+    <div className="gate">
+      <form onSubmit={handleSubmit} className="gate-form">
+        <label htmlFor="gate-password" className="gate-label">
+          Passord
+        </label>
         <input
+          id="gate-password"
           type="password"
           value={input}
           onChange={(e) => {
@@ -50,45 +54,15 @@ export default function PasswordGate({ children }) {
             setError("");
           }}
           autoFocus
-          style={styles.input}
+          className="gate-input"
         />
-        <button type="submit" style={styles.button}>
-          Enter
+        <button type="submit" className="gate-button">
+          Send
         </button>
-        {error && <p style={styles.error}>{error}</p>}
+        <p className="gate-error" role="alert">
+          {error}
+        </p>
       </form>
     </div>
   );
 }
-
-const styles = {
-  wrapper: {
-    minHeight: "100vh",
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    fontFamily: "system-ui, sans-serif",
-  },
-  form: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "12px",
-    width: "260px",
-  },
-  input: {
-    padding: "10px",
-    fontSize: "16px",
-    border: "1px solid #ccc",
-    borderRadius: "6px",
-  },
-  button: {
-    padding: "10px",
-    fontSize: "16px",
-    border: "none",
-    borderRadius: "6px",
-    background: "#222",
-    color: "#fff",
-    cursor: "pointer",
-  },
-  error: { color: "crimson", margin: 0, fontSize: "14px" },
-};

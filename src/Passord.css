@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Courier+Prime&family=Pinyon+Script&display=swap");
+
+/* Fallback-verdiene gjør at siden ser riktig ut selv om Home.css ikke er lastet ennå */
+.gate {
+  --g-paper: var(--paper, #cbced1);
+  --g-ink: var(--ink, #282a34);
+  --g-mono: var(--font-mono, "Courier Prime", "Courier New", monospace);
+  --g-script: var(--font-script, "Pinyon Script", cursive);
+
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  color: var(--g-ink);
+  font-family: var(--g-mono);
+  background:
+    radial-gradient(ellipse at center, #c3c8cd 0%, var(--g-paper) 60%, #a4abb2 100%);
+}
+
+.gate-form {
+  width: min(280px, 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.gate-title {
+  margin: 0 0 0.4em;
+  font-family: var(--g-script);
+  font-weight: 400;
+  font-size: clamp(40px, 8vw, 56px);
+  line-height: 1;
+}
+
+.gate-label {
+  margin-bottom: 14px;
+  font-size: 14px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* bare en tynn strek under, som en linje på et kort */
+.gate-input {
+  width: 100%;
+  padding: 8px 4px;
+  border: none;
+  border-bottom: 1px solid var(--g-ink);
+  background: transparent;
+  color: var(--g-ink);
+  font-family: var(--g-mono);
+  font-size: 18px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  outline: none;
+}
+
+.gate-input:focus {
+  border-bottom-width: 2px;
+  padding-bottom: 7px;
+}
+
+.gate-button {
+  margin-top: 28px;
+  padding: 10px 32px;
+  border: 1px solid var(--g-ink);
+  background: transparent;
+  color: var(--g-ink);
+  font-family: var(--g-mono);
+  font-size: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+.gate-button:hover,
+.gate-button:focus-visible {
+  background: var(--g-ink);
+  color: var(--g-paper);
+  outline: none;
+}
+
+/* holder plassen fast så layouten ikke hopper når feilen vises */
+.gate-error {
+  min-height: 1.4em;
+  margin: 16px 0 0;
+  font-size: 13px;
+  font-style: italic;
+}

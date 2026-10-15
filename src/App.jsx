@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PasswordGate from "./PasswordGate";
+import PasswordGate from "./Passord";
 import Home from "./Home";
 
 export default function App() {
