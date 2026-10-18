@@ -32,7 +32,7 @@ export default function PasswordGate({ children }) {
       sessionStorage.setItem(STORAGE_KEY, "true");
       setUnlocked(true);
     } else {
-      setError("Incorrect password");
+      setError("Uh oh, prøv igjen");
       setInput("");
     }
   }
