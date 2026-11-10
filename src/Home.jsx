@@ -2,7 +2,7 @@ import "./Home.css";
 import Navbar from "./components/Navbar";
 import CornerText from "./components/CornerText";
 import CouplePortrait from "./components/CouplePortrait";
-import bogs from "./assets/bogs.jpg";
+import aliogbetina from "./assets/aliogbetina.jpg";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
         <CornerText position="top-right" lines={["Gamlebyen,", "Oslo"]} />
 
         <CouplePortrait
-          photo={bogs}
+          photo={aliogbetina}
           nameTop="Betina"
           nameBottom="Ali"
         />
