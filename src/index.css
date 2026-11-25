@@ -7,10 +7,10 @@
 
 :root {
   /* Farger */
-  --paper: #cbced1;   /* lys grå-blå bakgrunn */
-  --ink: #282a34;     /* mørk marineblå tekst */
+  --paper: #F0EDE7;   /* lys grå-blå bakgrunn */
+  --ink: #5C1A1B;     /* mørk marineblå tekst */
   --accent: #9cbfa7;  /* grønn strek i menyen */
-  --white: #ffffff;
+  --white: #4da52b;
 
   /* Fonter */
   --font-body: system-ui, -apple-system, "Helvetica Neue", Arial, sans-serif;

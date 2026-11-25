@@ -9,7 +9,7 @@
   /* svak papirfølelse: lysere midt, kantene går over i bakgrunnsfargen */
   background: radial-gradient(
     ellipse at center,
-    #f6f5f3 0%,
+    #F0EDE7 0%,
     var(--paper) 60%,
     var(--paper) 100%
   );
