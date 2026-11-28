@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./Passord.css";
+//import "./Passord.css";
 
 // SHA-256 hash of your password (not the password itself).
 // Generate one with:

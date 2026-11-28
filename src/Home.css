@@ -3,10 +3,47 @@
    Farger og fonter kommer fra index.css
    ========================================================== */
 
+:root {
+  --wedding-red: #5C1A1B;   /* page 1 text colour */
+  --page-two-text: #F0EDE7; /* page 2 text colour */
+  --page-three-text: #5C1A1B; /* page 3 text colour */
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+}
+
+/* ---------- Scroll container ---------- */
 .home {
-  min-height: 100vh;
-  min-height: 100dvh;
-  /* svak papirfølelse: lysere midt, kantene går over i bakgrunnsfargen */
+  height: 100vh;
+  height: 100dvh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+.home::-webkit-scrollbar { display: none; }
+
+/* ---------- All pages ---------- */
+.snap-page {
+  position: relative;
+  box-sizing: border-box;
+  height: 100vh;
+  height: 100dvh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  padding: clamp(24px, 6vw, 72px);
+}
+
+/* ---------- Page 1: paper background, red text ---------- */
+.home-main {
   background: radial-gradient(
     ellipse at center,
     #F0EDE7 0%,
@@ -15,12 +52,46 @@
   );
 }
 
-.home-main {
-  position: relative;
-  min-height: 100vh;
-  min-height: 100dvh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: clamp(24px, 6vw, 72px);
+.home-main,
+.home-main * {
+  color: var(--wedding-red);
+}
+
+/* ---------- Page 2 ---------- */
+.page-two {
+  background: #486676;
+}
+
+.page-two,
+.page-two * {
+  color: var(--page-two-text);
+}
+
+/* ---------- Page 3 ---------- */
+.page-three {
+  background: #AAAC5A;
+}
+
+.page-three,
+.page-three * {
+  color: var(--page-three-text);
+}
+
+/* ---------- Fonts for pages 2 and 3 ---------- */
+.page-two h2,
+.page-three h2 {
+  font-family: var(--font-script);   /* swap for the curly font's real name */
+  font-weight: normal;
+  font-size: clamp(48px, 9vw, 110px);
+  line-height: 1;
+  margin: 0 0 0.4em;
+}
+
+.page-two p,
+.page-three p {
+  font-family: var(--font-mono);
+  font-size: clamp(13px, 1.6vw, 18px);
+  letter-spacing: 0.02em;
+  line-height: 1.4;
+  margin: 0;
 }
